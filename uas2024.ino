@@ -4,12 +4,12 @@
 #include "addons/RTDBHelper.h"
 
 // Firebase settings
-#define DATABASE_URL "https://cepsto-3b012-default-rtdb.firebaseio.com/" // Ganti dengan host Firebase Anda
-#define API_KEY "MwhxTXuWd1PNQCAowmMcisFtvr9IDHAssHq0q2kg" // Ganti dengan secret Firebase Anda
+#define DATABASE_URL "https://YOUR_RTDB-default-rtdb.firebaseio.com/" // Ganti dengan host Firebase Anda
+#define API_KEY "yOuRseCrEtKEy" // Ganti dengan secret Firebase Anda
 
 // WiFi settings
-#define WIFI_SSID "Rumah." // Ganti dengan SSID WiFi Anda
-#define WIFI_PASS "KunciT12" // Ganti dengan password WiFi Anda
+#define WIFI_SSID "SSIDwifi" // Ganti dengan SSID WiFi Anda
+#define WIFI_PASS "wifipass" // Ganti dengan password WiFi Anda
 
 FirebaseData fbdo;
 FirebaseAuth auth;
@@ -24,8 +24,8 @@ unsigned long sendDataPrevMillis = 0;
 unsigned long timerDelay = 180000;
 
 
-// Tentukan pin analog yang terhubung dengan sensor TDS
-const int TdsSensorPin = 27;
+
+const int TdsSensorPin = 33; // Must be pin 33 (READ ESP32 DATASHEET)
 
 float voltage, tdsValue, temperature = 25;
 
